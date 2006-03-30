@@ -1,0 +1,15 @@
+Shaolin Sheeps - OpenGL/Qt Demo
+Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+
+To compile from sources you will need Qt 4.1,
+see http://www.trolltech.com .
+
+While in the sources directory, type :
+
+  qmake (or qmake-qt4)
+
+and then :
+
+  make (or nmake)
+
+Shaolin Sheeps is free software. Please see COPYING for more information.
