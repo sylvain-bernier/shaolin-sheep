@@ -1,21 +1,21 @@
 /*
-    Shaolin Sheeps - OpenGL/Qt Demo
-    Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+    Shaolin Sheep - OpenGL/Qt Demo
+    Copyright (c) 2006  Sylvain Bernier <sylvain.bernier@gmail.com>
 
-    This file is part of Shaolin Sheeps.
+    This file is part of Shaolin Sheep.
 
-    Shaolin Sheeps is free software; you can redistribute it and/or modify
+    Shaolin Sheep is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
-    Shaolin Sheeps is distributed in the hope that it will be useful,
+    Shaolin Sheep is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Shaolin Sheeps; if not, write to the Free Software
+    along with Shaolin Sheep; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
@@ -54,7 +54,7 @@
 #define MAX_STEPS_PER_SECOND    MAX_STEPS_PER_MINUTE / 60.
 
 Texture* Sheep::sp_wool = 0;    // dynamically generated wool texture
-int Sheep::s_wool_count = 0;    // how many sheeps share this texture?
+int Sheep::s_wool_count = 0;    // how many sheep share this texture?
 
 // -------------------------------------------------------------------------
 // Sheep(size) : create a new animated sheep model
@@ -138,7 +138,7 @@ Sheep::Sheep(double i_size)
           eye_w->setMaterial(white);
           eye->addChild(eye_w);
           mp_eye_w[i] = eye_w;
-          
+
           // eye's pupil
           Sphere* eye_p = new Sphere(0.5);
           eye_p->setSlices(4);
@@ -154,7 +154,7 @@ Sheep::Sheep(double i_size)
         head->addChild(eye);
         mp_eye[i] = eye;
       }
-      
+
       // sheep's ears
       for (int i = 0, rl = 1; rl >= -1; rl -= (++i)*2) {
         Sphere* ear = new Sphere(0.5);
@@ -190,7 +190,7 @@ Sheep::Sheep(double i_size)
     tail->transform().setTranslation(Vector(-0.5, 0.125, 0.));
     sheep->addChild(tail);
     mp_tail = tail;
-    
+
     // sheep's legs
     for (int i = 0, fb = 1; fb >= -1; fb -= (++i)*2)
       for (int j = 0, rl = 1; rl >= -1; rl -= (++j)*2) {

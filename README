@@ -1,5 +1,5 @@
-Shaolin Sheeps - OpenGL/Qt Demo
-Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+Shaolin Sheep - OpenGL/Qt Demo
+Copyright (c) 2006  Sylvain Bernier <sylvain.bernier@gmail.com>
 
 To compile from sources you will need Qt 4.1,
 see http://www.trolltech.com .
@@ -12,4 +12,4 @@ and then :
 
   make (or nmake)
 
-Shaolin Sheeps is free software. Please see COPYING for more information.
+Shaolin Sheep is free software. Please see COPYING for more information.

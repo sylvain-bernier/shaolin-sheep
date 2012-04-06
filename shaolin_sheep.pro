@@ -3,15 +3,15 @@
 ######################################################################
 
 TEMPLATE = app
-VERSION = 0.0.0
-DEFINES += "SS_VERSION=\"$$VERSION\""
-TARGET += 
+VERSION = 0.0.1
+DEFINES += "SS_VERSION='\"$$VERSION\"'"
+TARGET +=
 DEPENDPATH += .
 INCLUDEPATH += .
 QT += opengl
 
 unix:LIBS += -lXxf86vm
-RC_FILE = shaolin_sheeps.rc
+RC_FILE = shaolin_sheep.rc
 CONFIG += release
 
 # Input

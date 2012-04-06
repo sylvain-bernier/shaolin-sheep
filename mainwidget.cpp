@@ -1,21 +1,21 @@
 /*
-    Shaolin Sheeps - OpenGL/Qt Demo
-    Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+    Shaolin Sheep - OpenGL/Qt Demo
+    Copyright (c) 2006  Sylvain Bernier <sylvain.bernier@gmail.com>
 
-    This file is part of Shaolin Sheeps.
+    This file is part of Shaolin Sheep.
 
-    Shaolin Sheeps is free software; you can redistribute it and/or modify
+    Shaolin Sheep is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
-    Shaolin Sheeps is distributed in the hope that it will be useful,
+    Shaolin Sheep is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Shaolin Sheeps; if not, write to the Free Software
+    along with Shaolin Sheep; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
@@ -51,7 +51,7 @@ MainWidget::MainWidget(QWidget* parent)
       mp_buttons[1]    = new QPushButton(tr("Left (A)"    ));
       mp_buttons[2]    = new QPushButton(tr("Backward (S)"));
       mp_buttons[3]    = new QPushButton(tr("Right (D)"   ));
-    
+
       m_button_keys[0] = Qt::Key_W;
       m_button_keys[1] = Qt::Key_A;
       m_button_keys[2] = Qt::Key_S;
@@ -68,8 +68,8 @@ MainWidget::MainWidget(QWidget* parent)
     QGridLayout* layout  = new QGridLayout;
 
     QLabel* label = new QLabel
-      (QString(tr("Shaolin Sheeps (c) 2006  Sylvain Bernier\n"))+
-       QString(tr("< sylvain_bernier03@yahoo.ca >\n"))+
+      (QString(tr("Shaolin Sheep (c) 2006  Sylvain Bernier\n"))+
+       QString(tr("< sylvain.bernier@gmail.com >\n"))+
        QString(tr("Version %1\n")).arg(SS_VERSION)+
        QString(tr("This is free software, see the file COPYING.\n")));
     {
@@ -80,14 +80,14 @@ MainWidget::MainWidget(QWidget* parent)
     }
 
     QLabel* label2 = new QLabel
-      (tr(" Click on the scene to (des)activate camera control. Press [SpaceBar] to jump. Protect the sheeps! (or try the right click) "));
+      (tr(" Click on the scene to (des)activate camera control. Press [SpaceBar] to jump. Protect the sheep! (or try right clicking) "));
     {
       label2->setAlignment(Qt::AlignTop | Qt::AlignCenter);
       label2->setFrameStyle(QFrame::Box | QFrame::Sunken);
       label2->setLineWidth(1);
       label->setMargin(1);
     }
-    
+
     // create main layout
     layout->addWidget(mp_box,        0, 0, 1, 4);
     layout->addWidget(mp_buttons[0], 1, 1      );

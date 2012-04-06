@@ -1,21 +1,21 @@
 /*
-    Shaolin Sheeps - OpenGL/Qt Demo
-    Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+    Shaolin Sheep - OpenGL/Qt Demo
+    Copyright (c) 2006  Sylvain Bernier <sylvain.bernier@gmail.com>
 
-    This file is part of Shaolin Sheeps.
+    This file is part of Shaolin Sheep.
 
-    Shaolin Sheeps is free software; you can redistribute it and/or modify
+    Shaolin Sheep is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
-    Shaolin Sheeps is distributed in the hope that it will be useful,
+    Shaolin Sheep is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Shaolin Sheeps; if not, write to the Free Software
+    along with Shaolin Sheep; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
@@ -30,7 +30,7 @@ class Texture;
 
 class Scene : public Globject
 //
-// Scene : main opengl scene, a green valley with sheeps
+// Scene : main opengl scene, a green valley with sheep
 //
 {
  public:
@@ -40,7 +40,7 @@ class Scene : public Globject
   // new frame tick (true -> the scene needs to be redrawn)
   bool tick(int i_ms);
 
-  // is the big ball evil? (wants to attack the sheeps)
+  // is the big ball evil? (wants to attack the sheep)
   void setEvilBigBall(bool i_evil);
 
   // access to interesting scene targets
@@ -58,8 +58,8 @@ class Scene : public Globject
   map_globject m_targets;         // available targets
   int          m_nextTargetId;    // next new target will get this id
   vec_textures m_textures;        // all textures used in the scene
-  int          m_sheep_counter;   // how many sheeps to protect?
-  vec_victims  m_victims;         // vector of sheeps to attack
+  int          m_sheep_counter;   // how many sheep to protect?
+  vec_victims  m_victims;         // vector of sheep to attack
   int          m_current_victim;  // current victim for the Big Red Ball
   Globject*    mp_big_ball;       // pointer to the Big Red Ball
   bool         m_evil_big_ball;   // is the Big Red Ball possessed?

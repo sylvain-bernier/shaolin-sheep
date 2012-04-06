@@ -1,21 +1,21 @@
 /*
-    Shaolin Sheeps - OpenGL/Qt Demo
-    Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+    Shaolin Sheep - OpenGL/Qt Demo
+    Copyright (c) 2006  Sylvain Bernier <sylvain.bernier@gmail.com>
 
-    This file is part of Shaolin Sheeps.
+    This file is part of Shaolin Sheep.
 
-    Shaolin Sheeps is free software; you can redistribute it and/or modify
+    Shaolin Sheep is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
-    Shaolin Sheeps is distributed in the hope that it will be useful,
+    Shaolin Sheep is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Shaolin Sheeps; if not, write to the Free Software
+    along with Shaolin Sheep; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
@@ -34,7 +34,7 @@
 #include <QtOpenGL>
 
 #define WORLD_RADIUS   1.e10  // radius of the sphere the world is in
-#define MAXIMUM_SHEEPS 7      // how many sheeps will we have to protect?
+#define MAXIMUM_SHEEP  7      // how many sheep will we have to protect?
 #define LIMIT_GRASS    500.   // where does the field of grass end?
 #define BIG_BALL_ACCEL 0.08   // Big Red Ball acceleration (m/s^2)
 
@@ -92,9 +92,9 @@ Scene::~Scene()
 
 bool Scene::tick(int i_ms)
 {
-  // we need some sheeps to protect from the Big Red Checkered Ball
-  if ((m_sheep_counter < MAXIMUM_SHEEPS) && (rand() % 100 == 0)) {  
-    // new sheeps have 3/4 the size of our hero
+  // we need some sheep to protect from the Big Red Checkered Ball
+  if ((m_sheep_counter < MAXIMUM_SHEEP) && (rand() % 100 == 0)) {
+    // new sheep have 3/4 the size of our hero
     Sheep* sheep = new Sheep(0.70 * 0.75);
     sheep->setMovable(true);
     m_victims.push_back(sheep);
@@ -107,7 +107,7 @@ bool Scene::tick(int i_ms)
     addChild(sheep);
   }
 
-  // the evil Big Red Checkered Ball wants to roll over the sheeps!
+  // the evil Big Red Checkered Ball wants to roll over the sheep!
   if (((m_current_victim < 0) || (rand() % 1000 == 0)) && m_sheep_counter)
     m_current_victim = (rand() % m_sheep_counter);
   if (m_evil_big_ball && mp_big_ball && (m_current_victim >= 0)) {
@@ -125,7 +125,7 @@ bool Scene::tick(int i_ms)
         (fabs((*it)->position().z()) > LIMIT_GRASS)) {
       (*it)->setPosition(Vector(0., 5., 0.));
     }
-  }  
+  }
 
   // move and animate each part of the scene
   double seconds = (double)i_ms / 1000.;
@@ -136,9 +136,9 @@ bool Scene::tick(int i_ms)
   return res;
 }
 
-// -------------------------------------------------------------------------
-// setEvilBigBall(evil) : is the big ball evil? (wants to attack the sheeps)
-// -------------------------------------------------------------------------
+// ------------------------------------------------------------------------
+// setEvilBigBall(evil) : is the big ball evil? (wants to attack the sheep)
+// ------------------------------------------------------------------------
 void Scene::setEvilBigBall(bool i_evil)
 {
   m_evil_big_ball = i_evil;
@@ -163,7 +163,7 @@ void Scene::globject_draw(QGLWidget* i_gl)
   // turn off lighting : we can't afford to use it here
   glDisable(GL_LIGHTING);
 
-  // wool texture from sheeps makes great grass
+  // wool texture from sheep makes great grass
   Texture::pushAttrib();
   Sheep::sp_wool->bind(i_gl);
 

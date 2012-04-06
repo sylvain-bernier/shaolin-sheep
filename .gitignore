@@ -1,0 +1,5 @@
+##### [ignore all the things!]
+/Makefile
+/moc_mainwidget.cpp
+/*.o
+/shaolin_sheep

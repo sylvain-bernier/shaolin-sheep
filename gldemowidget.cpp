@@ -1,21 +1,21 @@
 /*
-    Shaolin Sheeps - OpenGL/Qt Demo
-    Copyright (c) 2006  Sylvain Bernier <sylvain_bernier03@yahoo.ca>
+    Shaolin Sheep - OpenGL/Qt Demo
+    Copyright (c) 2006  Sylvain Bernier <sylvain.bernier@gmail.com>
 
-    This file is part of Shaolin Sheeps.
+    This file is part of Shaolin Sheep.
 
-    Shaolin Sheeps is free software; you can redistribute it and/or modify
+    Shaolin Sheep is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation; either version 2 of the License, or
     (at your option) any later version.
 
-    Shaolin Sheeps is distributed in the hope that it will be useful,
+    Shaolin Sheep is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Shaolin Sheeps; if not, write to the Free Software
+    along with Shaolin Sheep; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 
@@ -245,7 +245,7 @@ void GLDemoWidget::mousePressEvent(QMouseEvent* e)
     else releaseMouse();
   }
 
-  // big ball control - sheeps, beware!
+  // big ball control - sheep, beware!
   if (e->button() == Qt::RightButton) {
     m_big_ball = !m_big_ball;
     m_scene.setEvilBigBall(!m_big_ball);
